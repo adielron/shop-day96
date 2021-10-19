@@ -16,7 +16,6 @@ from functools import wraps
 
 load_dotenv('.env')
 SECRET_KEY = os.getenv("NAME")
-print(os.environ['PASSWORD'])
 print(SECRET_KEY)
 
 app = Flask(__name__)
