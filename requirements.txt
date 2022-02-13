@@ -1,4 +1,4 @@
-stripe~=2.65.0
+stripe==2.65.0
 psycopg2-binary==2.9.3
 Flask~=1.1.2
 python-dotenv~=0.19.1
