@@ -121,7 +121,7 @@ def buy(id):
             'quantity': 1,
         }],
         mode='payment',
-        success_url='http://localhost:80/success',
+        success_url='https://online-shop-12141234.herokuapp.com/success',
         cancel_url='https://example.com/cancel',
     )
 
