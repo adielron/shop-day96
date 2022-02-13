@@ -13,7 +13,7 @@ from functools import wraps
 import random
 import stripe
 
-stripe.api_key = os.environ['stripe']
+stripe.api_key = os.environ.get('stripe')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('key')
