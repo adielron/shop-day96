@@ -1,0 +1,30 @@
+{% include "header.html" %}
+<br>
+<br>
+<br>
+<div class="row" id="item-cards">
+
+  <div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{{item.img_url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.product_name}}</h5>
+        <p class="card-text">{{item.subtitle}}</p>
+        <p class="card-text">{{item.price}}$</p>
+
+
+      </div>
+      </div>
+      </div>
+
+
+
+  <div class="col-sm-4">
+
+  <form action="/create-checkout-session" method="POST">
+      <button type="submit">Checkout</button>
+    </form>
+
+      </div>
+
+      </div>

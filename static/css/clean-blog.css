@@ -483,3 +483,8 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+
+#item-cards.row {
+margin: 50%;
+}
+

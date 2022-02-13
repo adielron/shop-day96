@@ -1,27 +1,25 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField
-from wtforms.validators import DataRequired, URL,Email
+from wtforms import StringField, SubmitField, PasswordField,IntegerField
+from wtforms.validators import DataRequired, URL,Email, NumberRange
 from flask_ckeditor import CKEditorField
 
-##WTForm
-class CreatePostForm(FlaskForm):
-    title = StringField("Blog Post Title", validators=[DataRequired()])
-    subtitle = StringField("Subtitle", validators=[DataRequired()])
-    img_url = StringField("Blog Image URL", validators=[DataRequired(), URL()])
-    body = CKEditorField("Blog Content", validators=[DataRequired()])
-    submit = SubmitField("Submit Post")
+
 
 class Register_user(FlaskForm):
     email=StringField('EMAIL', validators=[Email(), DataRequired()])
     password = StringField("PASSWORD",validators=[DataRequired()])
     name=StringField("NAME",validators=[DataRequired()])
-    submit = SubmitField("Register")
+    submit = SubmitField("Register Me")
 
 class Login(FlaskForm):
     email = StringField('EMAIL', validators=[Email(), DataRequired()])
     password = StringField("PASSWORD", validators=[DataRequired()])
     submit = SubmitField("Let Me In")
 
-class CommentForm(FlaskForm):
-    body = CKEditorField("Blog Content", validators=[DataRequired()])
-    submit = SubmitField("Submit Comment")
+class Item(FlaskForm):
+  product_name=StringField("NAME",validators=[DataRequired()])
+  subtitle = StringField("Subtitle", validators=[DataRequired()])
+  img_url = StringField("Blog Image URL", validators=[DataRequired(), URL()])
+  price = IntegerField('price $',validators=[DataRequired()])
+  submit = SubmitField("Submit")
+
